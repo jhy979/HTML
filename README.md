@@ -73,3 +73,55 @@
  |`<input>`|데이터 입력 받기<br> `type="text,checkbox,radio(택1),"` `value="미리 입력된 값"`<br> `placeholder="이름을입력하세요"` `disabled `|inline+block요소|
  |`<label>`|라벨링(묶음) 가능한 요소의 제목|inline요소|
  |`<table>`|표<br> 행 : `<tr>` <br>열: `<td>`|block|
+  ## 5. 주석
+```html
+  <!-- 주석이예용~ -->
+```
+- 보통  단축기는 `ctrl+/` 
+## 6. 전역 속성(attribute)
+#### title
+```html
+<a href="http://naver.com" target="_blank" title="네이버로이동">Naver</a>
+```
+- 일종의 툴팁처럼 정보나 설명을 해줘요.
+#### style
+```html
+<tag style="스타일"></tag>
+```
+- CSS를 직접적으로 명시하는 방법이예요.
+#### class
+```html
+<tag class="이름"></tag>
+```
+- 요소를 일컫는 중복 가능한 이름이예요.
+```css
+.red{
+ color : red;
+ }
+```
+- 원하는 부분에 이름 가지고 css를 넣어줄 수 있어요. class를 지칭할때는 앞에 .(점) 을 넣어줘요.
+#### id
+```html
+<tag id="이름"></tag>
+```
+- 요소를 일컫는 중복 불가능한 이름이예요.
+- 고유하므로 중요한 위치에 쓸 때 좋아요.
+```css
+#abc{
+ color : blue;
+ }
+```
+- css에서 id를 지칭할때는 #을 붙여줘요.
+#### data
+```html
+<tag data-원하는이름 = "데이터"> </tag>
+```
+```html
+<div> data-fruit-name="apple">사과</div>
+<div> data-fruit-name="bannana">바나나</div>
+```
+- JS에서 이 데이터 요소를 활용할 수 있습니다.<br>
+👉 참고로 JS과 html 연결 시 아래 코드처럼 script tag 에서 defer 속성을 추가해야 html을 다 읽고 js가 실행됩니다.
+```html
+<script defer src="./main.js"></script>
+```
